@@ -6,7 +6,9 @@
 <title>Stagefright - various - poc stolen from ZHA</title>
 <script>
     var main=document.getElementById("main"),
-        ls=['sf-001.mp4']
+        ls=[];
+    for(var i=0;i<11;i++)ls.push(`sf-0${i<10?'0'+i:i}.mp4`)//populate list
+    
     for(var i in ls){
         main.appendChild(`
         <audio src="/${ls[i]}" controls autoplay>
